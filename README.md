@@ -2,7 +2,7 @@
 
 Group Members:
 
-Ramon Tores - Mightywise
-Tahmina Munni - TahminaM
-Gregory Vasquez - GregVasquezTech
+Ramon Tores - Mightywise </br>
+Tahmina Munni - TahminaM </br>
+Gregory Vasquez - GregVasquezTech </br>
 
