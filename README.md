@@ -1,1 +1,1 @@
-# Assignment2-JavaScript-Methods
+# Assignment2-JavaScript Methods
