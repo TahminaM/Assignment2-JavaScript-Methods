@@ -1,6 +1,6 @@
 # Assignment2-JavaScript Methods
 
-Group Members:
+<b>Group Members:</b>
 
 Ramon Tores - Mightywise </br>
 Tahmina Munni - TahminaM </br>
