@@ -10,12 +10,19 @@ Array.prototype.myEach = function (callbackFn) {
     }
 };
 
-
 // MAP //
-  Array.prototype.myMap = function() {
-    // Place your code here.
-  };
-  
+Array.prototype.myMap = function (cbFunc) {
+    res = [];
+
+    for (let i = 0; i < this.length; i++) {
+        if (this[i] === undefined) continue;
+
+        res[i] = cbFunc(this[i], i, this);
+    }
+
+    return res;
+};
+
 // SOME //
   Array.prototype.mySome = function() {
     // Place your code here.
@@ -35,8 +42,6 @@ Array.prototype.myEach = function (callbackFn) {
   Array.prototype.myIndexOf = function() {
     // Place your code here.
   };
- 
-  
   
 // PUSH //
 Array.prototype.myPush = function(...args) {  // Use rest parameter to accept any number of input arguments
