@@ -89,8 +89,26 @@ Array.prototype.mySome = function () {
 };
 
 // REDUCE //
-Array.prototype.myReduce = function () {
-    // Place your code here.
+Array.prototype.myReduce = function (cbFunc, initialVal) {
+    if (this.length === 0 && initialVal) return initialVal;
+    if (this.length === 1 && initialVal) return cbFunc(initialVal, this[0], 0, this);
+    else if (this.length === 1 && !initialVal) return this[0];
+
+    let prev = this[0];
+
+    if (!initialVal) {
+        for (let i = 0; i < this.length; i++) {
+            if (this[i] === undefined) continue;
+
+            cbFunc(prev, i, this);
+        }
+    } else {
+        for (let i = 0; i < this.length; i++) {
+            if (this[i] === undefined) continue;
+
+            cbFunc(this[i], i, this);
+        }
+    }
 };
 
 // INCLUDES //
@@ -103,8 +121,6 @@ Array.prototype.myIndexOf = function () {
     // Place your code here.
 };
 
-
-
 // PUSH //
 Array.prototype.myPush = function (...elemsToAdd) {  
     let elems_index = 0;  
@@ -116,8 +132,6 @@ Array.prototype.myPush = function (...elemsToAdd) {
     }
     return this.length;  // Return new length of "this" array
 };
-
-
 
 // LASTINDEXOF //
 Array.prototype.myLastIndexOf = function () {
