@@ -10,12 +10,6 @@ Array.prototype.myEach = function (callbackFn) {
     }
 };
 
-
-// MAP //
-  Array.prototype.myMap = function() {
-    // Place your code here.
-  };
-  
 // SOME //
   Array.prototype.mySome = function() {
     // Place your code here.
@@ -35,8 +29,6 @@ Array.prototype.myEach = function (callbackFn) {
   Array.prototype.myIndexOf = function() {
     // Place your code here.
   };
- 
-  
   
 // PUSH //
 Array.prototype.myPush = function(...args) {  // Use rest parameter to accept any number of input arguments
@@ -49,8 +41,6 @@ Array.prototype.myPush = function(...args) {  // Use rest parameter to accept an
     }
     return this.length;  // Return new length of "this" array
 };
-
-
   
 // LASTINDEXOF //
   Array.prototype.myLastIndexOf = function() {
@@ -69,15 +59,6 @@ Array.prototype.myPush = function(...args) {  // Use rest parameter to accept an
 
 
 // *********** Begin Ramon Torres Implementations ***********
-
-// FOR EACH //
-Array.prototype.myEach = function (cbFunc) {
-    for (let i = 0; i < this.length; i++) {
-        if (this[i] === undefined) continue;
-
-        cbFunc(this[i], i, this);
-    }
-};
 
 // MAP //
 Array.prototype.myMap = function (cbFunc) {
@@ -110,18 +91,6 @@ Array.prototype.myIncludes = function () {
 // INDEXOF //
 Array.prototype.myIndexOf = function () {
     // Place your code here.
-};
-
-// PUSH //
-Array.prototype.myPush = function (...elemsToAdd) {  
-    let elems_index = 0;  
-    let length = this.length;   
-    
-    for (let i = length; i < length + elemsToAdd.length; i++) {
-        this[i] = elemsToAdd[elems_index];  // Add new element to end of "this" array
-        elems_index++;
-    }
-    return this.length;  // Return new length of "this" array
 };
 
 // LASTINDEXOF //
