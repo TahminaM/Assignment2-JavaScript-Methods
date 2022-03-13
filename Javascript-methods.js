@@ -52,10 +52,30 @@ Array.prototype.myPush = function(...args) {  // Use rest parameter to accept an
 
 
   
-// LASTINDEXOF //
-  Array.prototype.myLastIndexOf = function() {
-    // Place your code here.
-  };
+// LASTINDEXOF   ************   Tahmina   ************
+
+/*The lastIndexOf() method returns the last index at which a given 
+element can be found in the array, or -1 if it is not present. 
+The array is searched backwards, starting at fromIndex.*/
+
+Array.prototype.myLastIndexOf = function (searchElement,fromIndex = this.length - 1) {
+  if (fromIndex >= this.length) {
+    for (let i = fromIndex; i >= 0; i--) {  // iterating backword, beggining at index 'fromIndex'
+      if (this[i] === searchElement) {
+        return i; // value found
+      }
+    }
+  } else if (fromIndex < 0) {
+    fromIndex = this.length + fromIndex; // compute start index for negative value
+  }
+  for (let i = fromIndex; i >= 0; i--) {
+    if (this[i] === searchElement) {
+      return i; // value found, return i
+    }
+  }
+  return -1; // if value not found, return -1
+};
+
   
 // KEYS //
   Object.myKeys = function() {
