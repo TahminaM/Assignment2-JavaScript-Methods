@@ -57,21 +57,19 @@ Array.prototype.myPush = function(...args) {  // Use rest parameter to accept an
     // Place your code here.
   };
   
-// KEYS   ***************  Tahmina   ***************
+// KEYS   ***************  Tahmina  ***************
 
 /* The Object.keys() method returns an array of a given 
 object's own enumerable property names, iterated in 
 the same order that a normal loop would. */
 
   Object.myKeys = function(obj) {
-    var objkeys = [];   // creates an empty array
+    var objkeys = [];   //create an empty array
     for(const property in obj){ //iterates through property in given obj
-      objkeys.push(property); // pushes property name in new array
+      objkeys.push(property); // pushes property name in new 
     }
     return objkeys;
   };
-
-
   
 // VALUES //
   Object.myValues = function() {
