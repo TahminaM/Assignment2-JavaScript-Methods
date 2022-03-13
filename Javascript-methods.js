@@ -10,6 +10,7 @@ Array.prototype.myEach = function (callbackFn) {
     }
 };
 
+
 // MAP //
   Array.prototype.myMap = function() {
     // Place your code here.
@@ -79,8 +80,16 @@ Array.prototype.myEach = function (cbFunc) {
 };
 
 // MAP //
-Array.prototype.myMap = function () {
-    // Place your code here.
+Array.prototype.myMap = function (cbFunc) {
+    res = [];
+
+    for (let i = 0; i < this.length; i++) {
+        if (this[i] === undefined) continue;
+
+        res[i] = cbFunc(this[i], i, this);
+    }
+
+    return res;
 };
 
 // SOME //
@@ -103,8 +112,6 @@ Array.prototype.myIndexOf = function () {
     // Place your code here.
 };
 
-
-
 // PUSH //
 Array.prototype.myPush = function (...elemsToAdd) {  
     let elems_index = 0;  
@@ -116,8 +123,6 @@ Array.prototype.myPush = function (...elemsToAdd) {
     }
     return this.length;  // Return new length of "this" array
 };
-
-
 
 // LASTINDEXOF //
 Array.prototype.myLastIndexOf = function () {
