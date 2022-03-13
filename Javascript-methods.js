@@ -10,6 +10,8 @@ Array.prototype.myEach = function (callbackFn) {
     }
 };
 
+// *************** Begin Ramon Torres Implementations ***************
+
 // MAP //
 Array.prototype.myMap = function (cbFunc) {
     res = [];
@@ -55,8 +57,10 @@ Array.prototype.myReduce = function (cbFunc, initialVal) {
     }
 
     return acc;
-
 };
+
+// *************** End Ramon Torres Implementations ***************
+
 // INCLUDES //
   Array.prototype.myIncludes = function() {
     // Place your code here.
@@ -79,9 +83,9 @@ Array.prototype.myPush = function(...args) {  // Use rest parameter to accept an
     return this.length;  // Return new length of "this" array
 };
 
+// *************** Begin Tahmina Munni Implementations ***************
 
-  
-// LASTINDEXOF   ************   Tahmina   ************
+// LASTINDEXOF //
 
 /*The lastIndexOf() method returns the last index at which a given 
 element can be found in the array, or -1 if it is not present. 
@@ -104,9 +108,8 @@ Array.prototype.myLastIndexOf = function (searchElement,fromIndex = this.length 
   }
   return -1; // if value not found, return -1
 };
-
   
-// KEYS   ***************  Tahmina  ***************
+// KEYS //
 
 /* The Object.keys() method returns an array of a given 
 object's own enumerable property names, iterated in 
@@ -120,7 +123,7 @@ the same order that a normal loop would. */
     return objkeys;
   };
   
-// VALUES     **************** Tahmina ********************
+// VALUES //
 
 /* The Object.values() method returns an array of a given object's
 own enumerable property values, in the same order as that provided 
@@ -132,4 +135,6 @@ by a for...in loop. */
       valueArray.push(obj[property]); //Pushes property values in new array
     }
     return valueArray;
-  };
+};
+
+// *************** End Tahmina Munni Implementations ***************
