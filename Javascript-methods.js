@@ -62,7 +62,16 @@ Array.prototype.myPush = function(...args) {  // Use rest parameter to accept an
     // Place your code here.
   };
   
-// VALUES //
-  Object.myValues = function() {
-    // Place your code here.
+// VALUES     **************** Tahmina ********************
+
+/* The Object.values() method returns an array of a given object's
+own enumerable property values, in the same order as that provided 
+by a for...in loop. */
+
+  Object.myValues = function(obj) {
+    var valueArray = [];         //Create an empty array 
+    for (const property in obj){ //Iterates through property in given object
+      valueArray.push(obj[property]); //Pushes property values in new array
+    }
+    return valueArray;
   };
