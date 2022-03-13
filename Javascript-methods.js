@@ -84,8 +84,16 @@ Array.prototype.myMap = function () {
 };
 
 // SOME //
-Array.prototype.mySome = function () {
-    // Place your code here.
+Array.prototype.mySome = function (cbFunc) {
+    if (this.length === 0) return false;
+
+    for (let i = 0; i < this.length; i++) {
+        if (this[i] === undefined) continue;
+
+        if (cbFunc(this[i], i, this) === true) return true;
+    }
+
+    return false;
 };
 
 // REDUCE //
@@ -103,8 +111,6 @@ Array.prototype.myIndexOf = function () {
     // Place your code here.
 };
 
-
-
 // PUSH //
 Array.prototype.myPush = function (...elemsToAdd) {  
     let elems_index = 0;  
@@ -116,8 +122,6 @@ Array.prototype.myPush = function (...elemsToAdd) {
     }
     return this.length;  // Return new length of "this" array
 };
-
-
 
 // LASTINDEXOF //
 Array.prototype.myLastIndexOf = function () {
