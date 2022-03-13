@@ -35,12 +35,28 @@ Array.prototype.mySome = function (cbFunc) {
 
     return false;
 };
-  
+
 // REDUCE //
-  Array.prototype.myReduce = function() {
-    // Place your code here.
-  };
-  
+Array.prototype.myReduce = function (cbFunc, initialVal) {
+    if (this.length === 0 && !initialVal) {
+        throw new TypeError();
+    }
+
+    let acc = (initialVal !== undefined) ? initialVal : undefined;
+
+    for (let i = 0; i < this.length; i++) {
+        if (this[i] === undefined) continue;
+
+        if (acc !== undefined) {
+            acc = cbFunc(acc, this[i], i, this);
+        } else {
+            acc = this[i]
+        }
+    }
+
+    return acc;
+
+};
 // INCLUDES //
   Array.prototype.myIncludes = function() {
     // Place your code here.
