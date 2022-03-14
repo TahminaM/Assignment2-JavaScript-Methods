@@ -32,7 +32,7 @@ Array.prototype.myEach = function (callbackFn) {
   Array.prototype.myIncludes = function(searchElement, fromIndex = 0) {
     if(fromIndex < this.length){ // Checks if fromIndex < this.length. the length of the array.
       for (let i = 0; i < this.length; i++){ // Iterates through the array.
-        if(item === this[i]){  
+        if(this[i] === searchElement){  
           return true; // Returns true if item is in the array.
         }
       }
@@ -79,4 +79,3 @@ Array.prototype.myPush = function(...args) {  // Use rest parameter to accept an
   Object.myValues = function() {
     // Place your code here.
   };
-
