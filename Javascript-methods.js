@@ -27,21 +27,25 @@ Array.prototype.myEach = function (callbackFn) {
   };
 
 
-// INCLUDES: Returns true if an item is in the array. If not, returns false//
-// Gregory
-  Array.prototype.myIncludes = function(item) {
-    for (let i = 0; i < this.length; i++){ // Iterates through the array.
-      if(item === this[i]){  
-        return true; // Returns true if item is in the array.
-      }
-    }
-    return false; // Returns false is item is not in the array.
-
-  };
+// INCLUDES //
+Array.prototype.myIncludes = function() {
+  // Place your code here.
+};
   
-// INDEXOF //
-  Array.prototype.myIndexOf = function() {
-    // Place your code here.
+// INDEXOF: Returns the first index of the element in the array. Returns -1 if the element is not in the array.
+// Gregory
+  Array.prototype.myIndexOf = function(searchElement, fromIndex = 0) {
+    if (fromIndex < this.length){ // Checks if fromIndex is less than the size of the array
+      for(let i = fromIndex; i < this.length; i++){ // Iterates through the array.
+        if (this[i] === searchElement){
+          return i; // Returns the first index of the element in the array.
+        }
+      }
+      return -1; // Returns -1 if the element is not found.
+    }
+    else {
+      return -1; // Returns -1 if fromIndex is greater than or equal to the array size. 
+    }
   };
  
   
@@ -74,4 +78,3 @@ Array.prototype.myPush = function(...args) {  // Use rest parameter to accept an
   Object.myValues = function() {
     // Place your code here.
   };
-
