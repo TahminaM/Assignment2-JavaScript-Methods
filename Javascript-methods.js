@@ -25,10 +25,18 @@ Array.prototype.myEach = function (callbackFn) {
   Array.prototype.myReduce = function() {
     // Place your code here.
   };
-  
-// INCLUDES //
-  Array.prototype.myIncludes = function() {
-    // Place your code here.
+
+
+// INCLUDES: Returns true if an item is in the array. If not, returns false//
+// Gregory
+  Array.prototype.myIncludes = function(item) {
+    for (let i = 0; i < this.length; i++){
+      if(item === this[i]){
+        return true;
+      }
+    }
+    return false;
+
   };
   
 // INDEXOF //
@@ -66,3 +74,4 @@ Array.prototype.myPush = function(...args) {  // Use rest parameter to accept an
   Object.myValues = function() {
     // Place your code here.
   };
+
