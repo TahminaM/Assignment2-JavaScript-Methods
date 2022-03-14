@@ -29,13 +29,18 @@ Array.prototype.myEach = function (callbackFn) {
 
 // INCLUDES: Returns true if an item is in the array. If not, returns false//
 // Gregory
-  Array.prototype.myIncludes = function(item) {
-    for (let i = 0; i < this.length; i++){ // Iterates through the array.
-      if(item === this[i]){  
-        return true; // Returns true if item is in the array.
+  Array.prototype.myIncludes = function(searchElement, fromIndex = 0) {
+    if(fromIndex < this.length){ // Checks if fromIndex < this.length. the length of the array.
+      for (let i = 0; i < this.length; i++){ // Iterates through the array.
+        if(item === this[i]){  
+          return true; // Returns true if item is in the array.
+        }
       }
+      return false; // Returns false is item is not in the array.
     }
-    return false; // Returns false is item is not in the array.
+    else {
+      return false; // Returns false if fromIndex >= this.length.
+    }
 
   };
   
