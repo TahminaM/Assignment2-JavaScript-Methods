@@ -30,12 +30,12 @@ Array.prototype.myEach = function (callbackFn) {
 // INCLUDES: Returns true if an item is in the array. If not, returns false//
 // Gregory
   Array.prototype.myIncludes = function(item) {
-    for (let i = 0; i < this.length; i++){
-      if(item === this[i]){
-        return true;
+    for (let i = 0; i < this.length; i++){ // Iterates through the array.
+      if(item === this[i]){  
+        return true; // Returns true if item is in the array.
       }
     }
-    return false;
+    return false; // Returns false is item is not in the array.
 
   };
   
