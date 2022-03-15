@@ -14,7 +14,7 @@ Array.prototype.myEach = function (callbackFn) {
 
 // MAP //
 Array.prototype.myMap = function (cbFunc) {
-    res = [];
+    let res = [];
 
     for (let i = 0; i < this.length; i++) {
         if (this[i] === undefined) continue;
@@ -61,15 +61,30 @@ Array.prototype.myReduce = function (cbFunc, initialVal) {
 
 // *************** End Ramon Torres Implementations ***************
 
+// *************** Begin Gregory Vasquez Implementations ***************
+
 // INCLUDES //
-  Array.prototype.myIncludes = function() {
-    // Place your code here.
-  };
+Array.prototype.myIncludes = function (searchElement, fromIndex = 0) {
+    if (fromIndex < this.length) { // Checks if fromIndex < this.length. the length of the array.
+        for (let i = 0; i < this.length; i++) { // Iterates through the array.
+            if (this[i] === searchElement) {
+                return true; // Returns true if item is in the array.
+            }
+        }
+        return false; // Returns false is item is not in the array.
+    }
+    else {
+        return false; // Returns false if fromIndex >= this.length.
+    }
+
+};
   
 // INDEXOF //
   Array.prototype.myIndexOf = function() {
     // Place your code here.
   };
+
+// *************** End Gregory Vasquez Implementations ***************
   
 // PUSH //
 Array.prototype.myPush = function(...args) {  // Use rest parameter to accept any number of input arguments
