@@ -14,49 +14,49 @@ Array.prototype.myEach = function (callbackFn) {
 
 // MAP //
 Array.prototype.myMap = function (cbFunc) {
-    let res = [];
+    let res = [];                               // Declare empty array to return
 
-    for (let i = 0; i < this.length; i++) {
-        if (this[i] === undefined) continue;
+    for (let i = 0; i < this.length; i++) {     // Iterate through entire array once
+        if (this[i] === undefined) continue;    // If an element in the array is undefined, skip it
 
-        res[i] = cbFunc(this[i], i, this);
+        res[i] = cbFunc(this[i], i, this);      // Execute the callback function for each element in array
     }
 
-    return res;
+    return res;     // Return resulting array
 };
 
 // SOME //
 Array.prototype.mySome = function (cbFunc) {
-    if (this.length === 0) return false;
+    if (this.length === 0) return false;        // If array is empty, return false
 
-    for (let i = 0; i < this.length; i++) {
-        if (this[i] === undefined) continue;
+    for (let i = 0; i < this.length; i++) {     // Iterate through entire array once
+        if (this[i] === undefined) continue;    // If an element in the array is undefined, skip it
 
-        if (cbFunc(this[i], i, this) === true) return true;
+        if (cbFunc(this[i], i, this) === true) return true;     // If a 'truthy' value is encountered, return true
     }
 
-    return false;
+    return false;       // If no 'truthy' value is found, return false
 };
 
 // REDUCE //
 Array.prototype.myReduce = function (cbFunc, initialVal) {
-    if (this.length === 0 && !initialVal) {
-        throw new TypeError();
+    if (this.length === 0 && !initialVal) {     // If the array is empty & no initial value is supplied,
+        throw new TypeError();                  // throw a TypeError
     }
 
-    let acc = (initialVal !== undefined) ? initialVal : undefined;
-
-    for (let i = 0; i < this.length; i++) {
-        if (this[i] === undefined) continue;
+    let acc = (initialVal !== undefined) ? initialVal : undefined;      // If initialVal is supplied, acc = initialVal
+                                                                        // Otherwise, acc = undefined
+    for (let i = 0; i < this.length; i++) {         // Iterate through entire array once
+        if (this[i] === undefined) continue;        // If an element in the array is undefined, skip it
 
         if (acc !== undefined) {
-            acc = cbFunc(acc, this[i], i, this);
+            acc = cbFunc(acc, this[i], i, this);    // If accumulator already has a value, execute callback function
         } else {
-            acc = this[i]
-        }
+            acc = this[i]                           // If accumulator is undefined, assign to it the value
+        }                                           // found at the current index of the array
     }
 
-    return acc;
+    return acc;         // Return accumulator results
 };
 
 // *************** End Ramon Torres Implementations ***************
