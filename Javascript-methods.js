@@ -80,9 +80,19 @@ Array.prototype.myIncludes = function (searchElement, fromIndex = 0) {
 };
   
 // INDEXOF //
-  Array.prototype.myIndexOf = function() {
-    // Place your code here.
-  };
+Array.prototype.myIndexOf = function (searchElement, fromIndex = 0) {
+    if (fromIndex < this.length) { // Checks if fromIndex is less than the size of the array
+        for (let i = fromIndex; i < this.length; i++) { // Iterates through the array.
+            if (this[i] === searchElement) {
+                return i; // Returns the first index of the element in the array.
+            }
+        }
+        return -1; // Returns -1 if the element is not found.
+    }
+    else {
+        return -1; // Returns -1 if fromIndex is greater than or equal to the array size. 
+    }
+};
 
 // *************** End Gregory Vasquez Implementations ***************
   
