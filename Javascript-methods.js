@@ -10,7 +10,7 @@ Array.prototype.myEach = function (callbackFn) {
     }
 };
 
-// *************** Begin Ramon Torres Implementations ***************
+// *************** Begin Ramon Torres Implementations *************** //
 
 // MAP //
 Array.prototype.myMap = function (cbFunc) {
@@ -59,9 +59,9 @@ Array.prototype.myReduce = function (cbFunc, initialVal) {
     return acc;         // Return accumulator results
 };
 
-// *************** End Ramon Torres Implementations ***************
+// *************** End Ramon Torres Implementations *************** //
 
-// *************** Begin Gregory Vasquez Implementations ***************
+// *************** Begin Gregory Vasquez Implementations *************** //
 
 // INCLUDES //
 Array.prototype.myIncludes = function (searchElement, fromIndex = 0) {
@@ -94,7 +94,7 @@ Array.prototype.myIndexOf = function (searchElement, fromIndex = 0) {
     }
 };
 
-// *************** End Gregory Vasquez Implementations ***************
+// *************** End Gregory Vasquez Implementations *************** //
   
 // PUSH //
 Array.prototype.myPush = function(...args) {  // Use rest parameter to accept any number of input arguments
@@ -108,7 +108,7 @@ Array.prototype.myPush = function(...args) {  // Use rest parameter to accept an
     return this.length;  // Return new length of "this" array
 };
 
-// *************** Begin Tahmina Munni Implementations ***************
+// *************** Begin Tahmina Munni Implementations *************** //
 
 // LASTINDEXOF //
 
@@ -162,4 +162,4 @@ by a for...in loop. */
     return valueArray;
 };
 
-// *************** End Tahmina Munni Implementations ***************
+// *************** End Tahmina Munni Implementations *************** //
